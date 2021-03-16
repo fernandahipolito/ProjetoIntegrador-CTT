@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Minhas Tarefas</string>
+    <string name="titulo_app">Tarefas</string>
+    <string name="nome_tarefa">Digite a tarefa</string>
+    <string name="descricao_tarefa">Descreva a tarefa</string>
+    <string name="botaoAddicionar">+ Adicionar</string>
+    <string name="title_activity_lista">Lista de Tarefas</string>
+    <string name="nova_tarefa">Nova Tarefa</string>
+    <string name="adicionar_tarefa">Adicione uma tarefa</string>
+    <string name="optional">Opcional</string>
+
+</resources>
