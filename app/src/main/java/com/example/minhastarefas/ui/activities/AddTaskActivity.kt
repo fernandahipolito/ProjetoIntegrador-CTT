@@ -8,7 +8,7 @@ import android.widget.EditText
 import com.example.minhastarefas.R
 
 
-class AdicionarTarefaActivity : AppCompatActivity() {
+class AddTaskActivity : AppCompatActivity() {
     lateinit var botaoAdicionarTarefa: Button
     lateinit var nomeTarefa: EditText
     lateinit var descricaoTarefa: EditText
@@ -22,7 +22,7 @@ class AdicionarTarefaActivity : AppCompatActivity() {
         descricaoTarefa = findViewById(R.id.edt_add_description)
 
         botaoAdicionarTarefa.setOnClickListener {
-            val telaLista = Intent(this, ListaActivity::class.java)
+            val telaLista = Intent(this, ListTasksActivity::class.java)
             telaLista.putExtra("NOME", nomeTarefa.text)
             telaLista.putExtra("DESCRICAO", descricaoTarefa.text)
             startActivity(telaLista)

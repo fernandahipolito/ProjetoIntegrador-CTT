@@ -11,10 +11,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".ui.activities.ListaActivity"
+                android:name=".ui.activities.ListTasksActivity"
                 android:label="@string/title_activity_lista">
         </activity>
-        <activity android:name=".ui.activities.AdicionarTarefaActivity">
+        <activity android:name=".ui.activities.AddTaskActivity">
         </activity>
         <activity
                 android:name=".ui.activities.SplashActivity"

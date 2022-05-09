@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.minhastarefas.R
 import com.example.minhastarefas.model.Tarefa
 
-class ListaActivity : AppCompatActivity() {
+class ListTasksActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.list_tasks)
@@ -17,7 +17,7 @@ class ListaActivity : AppCompatActivity() {
 
 
         val rvTarefas = findViewById<RecyclerView>(R.id.rv_my_tasks)
-        val adapterTarefas = TarefasAdapter(listaTarefas)
+        val adapterTarefas = TasksAdapter(listaTarefas)
         rvTarefas.adapter = adapterTarefas
 
 

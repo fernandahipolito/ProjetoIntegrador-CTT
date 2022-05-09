@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.minhastarefas.R
 import com.example.minhastarefas.model.Tarefa
 
-class TarefasAdapter(private val listaTarefas:MutableList<Tarefa>): RecyclerView.Adapter<TarefasAdapter.TarefasHolder>() {
+class TasksAdapter(private val listaTarefas:MutableList<Tarefa>): RecyclerView.Adapter<TasksAdapter.TarefasHolder>() {
     fun adicionarTarefa(listaTarefas: MutableList<Tarefa>, tarefa:Tarefa) {
         listaTarefas.add(tarefa)
         notifyDataSetChanged()
