@@ -16,13 +16,13 @@ class TarefasAdapter(private val listaTarefas:MutableList<Tarefa>): RecyclerView
     }
 
     class TarefasHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val nomeTarefa: TextView = view.findViewById(R.id.txtItemTarefa)
-        val descricaoTarefa: TextView = view.findViewById(R.id.txtDescricaoItemTarefa)
+        val nomeTarefa: TextView = view.findViewById(R.id.tv_title_task)
+        val descricaoTarefa: TextView = view.findViewById(R.id.txt_description_task)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TarefasHolder {
         val view = LayoutInflater.from(parent.context).
-        inflate(R.layout.item_tarefa, parent, false)
+        inflate(R.layout.item_task, parent, false)
         return TarefasHolder(view)
 
     }

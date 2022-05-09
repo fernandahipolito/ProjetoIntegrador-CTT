@@ -8,10 +8,10 @@
     tools:context=".ui.activities.ListaActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTarefas"
+        android:id="@+id/rv_my_tasks"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        tools:listitem="@layout/item_tarefa"
+        tools:listitem="@layout/item_task"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

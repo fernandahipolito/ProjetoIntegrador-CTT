@@ -10,13 +10,13 @@ import com.example.minhastarefas.model.Tarefa
 class ListaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lista)
+        setContentView(R.layout.list_tasks)
 
         val tarefaDigitada = intent.extras?.get("NOME").toString()
         val descricaoDigitada = intent.extras?.get("DESCRICAO").toString()
 
 
-        val rvTarefas = findViewById<RecyclerView>(R.id.rvTarefas)
+        val rvTarefas = findViewById<RecyclerView>(R.id.rv_my_tasks)
         val adapterTarefas = TarefasAdapter(listaTarefas)
         rvTarefas.adapter = adapterTarefas
 

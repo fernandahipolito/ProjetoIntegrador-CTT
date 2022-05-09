@@ -1,13 +1,11 @@
 package com.example.minhastarefas.ui.activities
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.example.minhastarefas.R
-import com.example.minhastarefas.model.Tarefa
 
 
 class AdicionarTarefaActivity : AppCompatActivity() {
@@ -17,11 +15,11 @@ class AdicionarTarefaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.adicionar_tarefa)
+        setContentView(R.layout.add_task)
 
-        botaoAdicionarTarefa = findViewById(R.id.btnCriarNovaTarefa)
-        nomeTarefa = findViewById(R.id.edtTituloAdd)
-        descricaoTarefa = findViewById(R.id.edtDescricaoAdd)
+        botaoAdicionarTarefa = findViewById(R.id.btn_add_new_task)
+        nomeTarefa = findViewById(R.id.edt_title_add)
+        descricaoTarefa = findViewById(R.id.edt_add_description)
 
         botaoAdicionarTarefa.setOnClickListener {
             val telaLista = Intent(this, ListaActivity::class.java)

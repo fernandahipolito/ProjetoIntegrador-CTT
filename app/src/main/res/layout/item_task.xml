@@ -16,7 +16,7 @@
             android:layout_marginBottom="8dp">
 
         <TextView
-                android:id="@+id/txtItemTarefa"
+                android:id="@+id/tv_title_task"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="24dp"
@@ -28,7 +28,7 @@
         />
 
         <TextView
-                android:id="@+id/txtDescricaoItemTarefa"
+                android:id="@+id/txt_description_task"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="24dp"

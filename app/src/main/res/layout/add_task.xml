@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teste"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_skipCollapsed="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@drawable/bola_background"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:text="@string/titulo_app"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48.6dp"
+                android:text="@string/nova_tarefa"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/adicionar_tarefa"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_title_add"
+                android:layout_width="328dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/colorPastel"
+                android:hint="@string/nome_tarefa"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/edt_add_description"
+                android:layout_width="328dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="59dp"
+                android:background="@color/colorPastel"
+                android:gravity="center_horizontal"
+                android:hint="@string/descricao_tarefa"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/optional" />
+
+            <Button
+                android:id="@+id/btn_add_new_task"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginBottom="49dp"
+                android:background="@drawable/bola_background"
+                android:text="@string/botaoAddicionar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
