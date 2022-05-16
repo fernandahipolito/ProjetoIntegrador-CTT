@@ -3,35 +3,37 @@ package com.example.minhastarefas.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.minhastarefas.R
 import com.example.minhastarefas.databinding.ListTasksBinding
-import com.example.minhastarefas.model.Tarefa
+import com.example.minhastarefas.model.Tasks
+import com.example.minhastarefas.ui.list.TasksAdapter
 
 class ListTasksActivity : AppCompatActivity() {
-    val binding: ListTasksBinding by lazy { ListTasksBinding.inflate(layoutInflater) }
+
+    private val binding: ListTasksBinding by lazy { ListTasksBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root) //se colocar o layout não aparece a lista
 
-        val tarefaDigitada = intent.extras?.get("NOME").toString()
-        val descricaoDigitada = intent.extras?.get("DESCRICAO").toString()
+        val typedTaskTitle = intent.extras?.get("NOME").toString()
+        val typedTaskDescription = intent.extras?.get("DESCRICAO").toString()
 
 
-        val rvTarefas = binding.rvMyTasks
-        val adapterTarefas = TasksAdapter(listaTarefas)
-        rvTarefas.adapter = adapterTarefas
+        val rvTasks = binding.rvMyTasks
+        //val adapterTarefas = TasksAdapter(listaTarefas)
+        val tasksAdapter = TasksAdapter(listOfTasks)
+        rvTasks.adapter = tasksAdapter
 
 
-        adapterTarefas.adicionarTarefa(listaTarefas,Tarefa(tarefaDigitada,descricaoDigitada))
+        tasksAdapter.addTask(listOfTasks, Tasks(typedTaskTitle, typedTaskDescription))
 
-        rvTarefas.layoutManager = LinearLayoutManager(this)
+
+        rvTasks.layoutManager = LinearLayoutManager(this)
 
     }
 
-    companion object{
-        val listaTarefas: MutableList<Tarefa> = mutableListOf(
-            Tarefa("Pagamento", "Pagar a conta da net que vence dia 10")
+    companion object {
+        val listOfTasks: MutableList<Tasks> = mutableListOf(
+            Tasks("Pagamento", "Pagar a conta da net que vence dia 10")
         )
     }
 }

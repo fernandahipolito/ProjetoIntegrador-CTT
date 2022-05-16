@@ -25,10 +25,10 @@ class AddTaskActivity : AppCompatActivity() {
         //descricaoTarefa = findViewById(R.id.edt_add_description)
 
         binding.btnAddNewTask.setOnClickListener {
-            val telaLista = Intent(this, ListTasksActivity::class.java)
-            telaLista.putExtra("NOME", titleTask.text)
-            telaLista.putExtra("DESCRICAO", descriptionTask.text)
-            startActivity(telaLista)
+            val featureList = Intent(this, ListTasksActivity::class.java)
+            featureList.putExtra("NOME", titleTask.text)
+            featureList.putExtra("DESCRICAO", descriptionTask.text)
+            startActivity(featureList)
             titleTask.setText("")
             descriptionTask.setText("")
             titleTask.requestFocus()
