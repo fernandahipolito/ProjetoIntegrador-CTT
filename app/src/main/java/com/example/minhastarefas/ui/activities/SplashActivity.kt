@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, AdicionarTarefaActivity::class.java))
+            startActivity(Intent(this, AddTaskActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
 

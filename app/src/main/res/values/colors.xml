@@ -5,4 +5,7 @@
     <color name="colorAccent">#634C83</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorPastel">#D3C6BA</color>
+    <color name="colorGray">#DCDCDC</color>
+    <color name="colorAccentTrans">#2F634C83</color>
+
 </resources>
